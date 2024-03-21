@@ -1,0 +1,60 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 20.07.0 ] */
+/* [wxMaxima: section start ]
+Triseccion
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+triseccion(expr,var,ext_inf,ext_sub):=
+        
+        block(
+
+                [a,b,c1,c2],
+                local(f),
+    
+                .......
+            
+
+                c1:a+(b-a)/3,
+                c2:a+(b-a)/3,
+                
+                if f(c1)=0 then return(),
+                if f(c2)=0 then return()
+                
+                while (b*a)/2> error_abs do(
+        
+                    c1:a+(b-a)/3,
+                    c2:a+2*(b-a)/3,
+                    if(c1)=0 then return(),
+                    if(c2)=0 then return(),
+                    if f(a)*f(c1)<0 then b:c1,
+                    if f(c1)*f(c2)<0 then (a:c1,b:c2) else a:c2            
+    
+    
+                ),
+
+            (a+b)/2
+
+        );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: section start ]
+Bucles
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+for i:1 thru 10 step 2 do(display(3*i),otracosa);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+while
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 20.07.0"$
